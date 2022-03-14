@@ -19,6 +19,13 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddDbContext<StoreContext>(opt => opt.UseSqlServer(builder.Configuration["ConnectionStrings:DefaultConnection"]));
 builder.Services.AddAutoMapper(typeof(MappingProfiles));
 builder.Services.AddSwaggerDocumentation();
+builder.Services.AddCors(opt => 
+{
+    opt.AddPolicy("CorsPolicy", policy =>
+    {
+        policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:5001");
+    });
+});
 builder.Services.AddApplicationServices();
 
 var app = builder.Build();
@@ -36,6 +43,8 @@ app.UseStatusCodePagesWithReExecute("/errors/{0}");
 app.UseHttpsRedirection();
 
 app.UseStaticFiles();
+
+app.UseCors("CorsPolicy");
 
 app.UseAuthorization();
 
