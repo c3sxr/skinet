@@ -1,0 +1,2 @@
+--To use notifications
+npm install ngx-toastr
