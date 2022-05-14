@@ -1,2 +1,11 @@
 --To use notifications
 npm install ngx-toastr
+
+--To use navigation  breadcrumb
+npm install --save xng-breadcrumb
+
+--CHange theme using bootswatch
+npm install bootswatch
+
+--Loading indicator
+npm install ngx-spinner
