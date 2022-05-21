@@ -1,3 +1,21 @@
+-- Create solution
+dotnet new sln
+
+--Create web api
+dotnet new webapi -o TwilioVoice
+
+--Add web api to solution
+ dotnet sln add .\TwilioVoice\
+
+--Open with VS Code
+ code .
+
+--Add class library
+ dotnet new classlib -o Core
+
+--Add reference of a library to a api
+dotnet add reference ..\Core\
+
 --To use notifications
 npm install ngx-toastr
 
@@ -9,3 +27,12 @@ npm install bootswatch
 
 --Loading indicator
 npm install ngx-spinner
+
+
+----------------------
+API
+
+install Microsoft.Extensions.Caching.StackExchangeRedis for in memory persistance (cache) with nugget
+
+--- Docket
+docker-compose up --detach
