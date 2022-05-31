@@ -28,6 +28,8 @@ npm install bootswatch
 --Loading indicator
 npm install ngx-spinner
 
+--GUID generator
+npm install uuid
 
 ----------------------
 API
@@ -36,3 +38,4 @@ install Microsoft.Extensions.Caching.StackExchangeRedis for in memory persistanc
 
 --- Docket
 docker-compose up --detach
+
