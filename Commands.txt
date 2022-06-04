@@ -39,3 +39,13 @@ install Microsoft.Extensions.Caching.StackExchangeRedis for in memory persistanc
 --- Docket
 docker-compose up --detach
 
+----
+Identity
+
+Microsoft.AspNetCore.Identity.EntityFrameworkCore
+Microsoft.AspNetCore.Identity
+Microsoft.identitymodel.Tokens
+System.IdentityModel.Tokens.Jwt
+Microsoft.AspNetCore.Authentication.JwtBearer
+
+dotnet ef migrations add IdentityInitial -p Infrastructure -s API -c AppIdentityDbContext -o Identity/Migrations
