@@ -49,3 +49,4 @@ System.IdentityModel.Tokens.Jwt
 Microsoft.AspNetCore.Authentication.JwtBearer
 
 dotnet ef migrations add IdentityInitial -p Infrastructure -s API -c AppIdentityDbContext -o Identity/Migrations
+dotnet ef migrations add OrderEntityAdded -p Infrastructure -s API -c StoreContext
