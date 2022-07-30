@@ -1,0 +1,27 @@
+button.nav-link {
+    background-color: #e9ecef;
+    border-radius: 0;
+    border: none;
+
+    &:focus{
+        outline:none;
+    }
+    &.active:hover{
+        color: white;
+    }
+    &.active{
+        outline: none;
+    }
+    &.active:focus{
+        outline: none;
+    }
+}
+
+.button-stepper
+{
+    width: 100%;
+}
+.nav-item-no-padding
+{
+    margin-right: 0px;
+}
