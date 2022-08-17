@@ -10,6 +10,7 @@ public static class ApplicationServicesExtensions
 {
     public static IServiceCollection AddApplicationServices(this IServiceCollection services)
     {
+        services.AddSingleton<IResponseCacheService, ResponseCacheService>();
         //We add these because is a service and it will be injected
         services.AddScoped<ITokenService, TokenService>();
         services.AddScoped<IOrderService, OrderService>();
@@ -18,6 +19,7 @@ public static class ApplicationServicesExtensions
         services.AddScoped<IProductRepository, ProductRepository>();
         services.AddScoped<IBasketRepository, BasketRepository>();
         services.AddScoped(typeof(IGenericRepository<>), (typeof(GenericRepository<>)));
+        
     
         services.Configure<ApiBehaviorOptions>(options => 
         {
